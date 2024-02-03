@@ -112,11 +112,16 @@ If you get a error does not exist type thing & Kiauh is not already installed go
 
 If it is already installed it should now bring up a request for an update, type `y` to update Kiauh
 
-You can try to update `Klipper`, `Moonraker` & `Mainsail`
+You can try to update `Klipper`, `Moonraker` & `Mainsail` These updates will probably fail.
 
-The updates will probably fail.
 
-As on my system these items had been locked with permission/user/group changes & it was not possible to update them, it turned out you can remove them though, so it was quicker & easier to simply remove them in `Kiauh` & reinstall the new versions a-fresh! Then you know there's no old stuff floating about in there also. BUT READ ON BEFORE YOU DO THIS!!!
+
+## UPDATE/REMOVE COMPONENTS
+
+A quick note on `Crowsnest` before we go further, the latest version is NOT compatible with this old Buster image used on this T300 printer. DO NOT UPDATE IT! IT WILL NOT WORK HERE!
+It is very importatnt to leave `Crowsnest` exactly as it is!!
+
+Moving on, my system these items had been locked with permission/user/group changes & it was not possible to update them, it turned out you can remove them though, so it was quicker & easier to simply remove them in `Kiauh` & reinstall the new versions a-fresh! Then you know there's no old stuff floating about in there also. BUT READ ON BEFORE YOU DO THIS!!!
 
 However, if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way to remove or update it.
 
@@ -136,7 +141,7 @@ To make the change in user & group paste in this
 ```
 sudo -R chown mks:mks mainsail
 ```
-This is the recursive form of the command & should change the user & group of the `Mainsail` directory & all files & subdirectories back to your `mks` user profile & allow you to remove or update them.
+This is the recursive form of the command & should change the user & group of the `Mainsail` directory & all files & subdirectories within & change them back to your `mks` user profile & allow you to remove or update them.
 That `chown` command would probably work for the lock on `Klipper` & `Moonraker` too, but I chose to remove & reinstall them instead of messing about with it all as they could be deleted without modification, where as `Mainsail` could not.
 
 Your choice if you try the `chown` command on `klipper` & `Moonraker` or not.
@@ -147,7 +152,7 @@ IF YOU CHOOSE TO TRY THE `chown` command & elect to `UPDATE` your installs now i
 
 ### NOTE IF YOU REMOVE YOUR INSTALLS YOU WILL LOOSE YOUR PRINTER.CFG FILE AND ALL DATA IN YOUR CONFIG FOLDER!! DONT BE THAT PERSON!
 
-IF YOU CHOOSE TO REMOVE: Select option `3 Remove`. Then remove `Klipper`, `Moonraker` & `Mainsail`. Also `Fluidd` if you wish.
+IF YOU CHOOSE TO REMOVE: Select option `3 Remove` in `Kiauh`. Then remove `Klipper`, `Moonraker` & `Mainsail`. Also `Fluidd` if you wish.
 
 
 Now head back to `Kiauh` option `1 Install` & install fresh versions of `Klipper`, `Moonraker`, & `Mainsail`
@@ -164,7 +169,7 @@ Now log back on to `Mainsail` & go back to the `Machine` tab, & copy all your ba
 
 ## UPDATE MANAGER
 
-You should have access to the `UPDATE MANAGER` in the `Machine` tab.
+Now, back into `Mainsail`. You should have access to the `UPDATE MANAGER` in the `Machine` tab.
 - Click the circle arrow button in the top of that section the get the latest update info to make sure thats working.
 - Click update on your components if needed
 - NOTE THIS CAN TAKE A LONG TIME - 10-20 minutes in some cases! Wait for it to complete if updates are required
