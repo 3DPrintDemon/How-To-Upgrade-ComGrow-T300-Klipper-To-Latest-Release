@@ -78,31 +78,11 @@ Here you need your rabbits foot & to keep your fingers crossed as the new update
 If it fails to start you'll need to look at unbricking & reinstalling your image.
 If it works like mine did GREAT well done, the tricky bit is over!
 
+## CROWSNEST
+A quick note on `Crowsnest` before we go further, the latest version is NOT compatible with this old Buster image used on this T300 printer. DO NOT UPDATE IT! IT WILL NOT WORK HERE!
+It is very importatnt to leave `Crowsnest` exactly as it is!!
+
 ## UPDATING KLIPPER, MAINSAIL & MOONRAKER
-
-Open your web browser & head over to your printer. Then on `Mainsail` open the `Machine` tab & find your `moonraker.conf` file & paste in at the bottom
-
-moonraker.conf
-```
-[update_manager] 
-channel: dev 
-refresh_interval: 168 
-enable_system_updates: False 
-
-[update_manager mainsail]
-type: web
-channel: stable
-repo: mainsail-crew/mainsail
-path: ~/mainsail
-
-[update_manager mainsail-config]
-type: git_repo
-primary_branch: master
-path: ~/mainsail-config
-origin: https://github.com/mainsail-crew/mainsail-config.git
-managed_services: klipper
-```
-Then you need to `SAVE & RESTART` klipper 
 
 Now on SSH run 
 ```
@@ -114,14 +94,7 @@ If it is already installed it should now bring up a request for an update, type 
 
 You can try to update `Klipper`, `Moonraker` & `Mainsail` These updates will probably fail.
 
-
-
-## UPDATE/REMOVE COMPONENTS
-
-A quick note on `Crowsnest` before we go further, the latest version is NOT compatible with this old Buster image used on this T300 printer. DO NOT UPDATE IT! IT WILL NOT WORK HERE!
-It is very importatnt to leave `Crowsnest` exactly as it is!!
-
-Moving on, my system these items had been locked with permission/user/group changes & it was not possible to update them, it turned out you can remove them though, so it was quicker & easier to simply remove them in `Kiauh` & reinstall the new versions a-fresh! Then you know there's no old stuff floating about in there also. BUT READ ON BEFORE YOU DO THIS!!!
+This is because at the time of writing on my system these items had been locked with permission/user/group changes & it was not possible to update them, it turns out you can remove them though, so it was quicker & easier to simply remove them in `Kiauh` & reinstall the new versions a-fresh! Then you know there's no old stuff floating about in there also. BUT READ ON BEFORE YOU DO THIS!!!
 
 However, if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way to remove or update it.
 
@@ -146,11 +119,11 @@ That `chown` command would probably work for the lock on `Klipper` & `Moonraker`
 
 Your choice if you try the `chown` command on `klipper` & `Moonraker` or not.
 
-IF YOU CHOOSE TO TRY THE `chown` command & elect to `UPDATE` your installs now is the time for that & then jump down past the next steps to the `UPDATE MANAGER` title.
+IF YOU CHOOSE TO TRY THE `chown` command & elect to `UPDATE` your installs now is the time for that & then jump down past the next steps to the `ERROR TIME` title.
 
-### OR TO REMOVE THE INSTALLS YOU NEED TO HAVE MADE THAT DOWNLOAD BACKUP AT THE START BEFORE YOU DO THIS NEXT STEP OR YOU'RE IN TROUBLE!!
+### TO REMOVE THE INSTALLS YOU NEED TO HAVE MADE THAT DOWNLOAD BACKUP AT THE START BEFORE YOU DO THIS NEXT STEP OR YOU'RE IN TROUBLE!!
 
-### NOTE IF YOU REMOVE YOUR INSTALLS YOU WILL LOOSE YOUR PRINTER.CFG FILE AND ALL DATA IN YOUR CONFIG FOLDER!! DONT BE THAT PERSON!
+### NOTE IF YOU REMOVE YOUR INSTALLS YOU WILL LOOSE YOUR PRINTER.CFG FILE AND ALL DATA IN YOUR CONFIG FOLDER!! DONT BE THAT PERSON! MAKE SURE YOU HAVE THAT BACKUP NOW!!
 
 IF YOU CHOOSE TO REMOVE: Select option `3 Remove` in `Kiauh`. Then remove `Klipper`, `Moonraker` & `Mainsail`. Also `Fluidd` if you wish.
 
@@ -163,9 +136,15 @@ sudo reboot
 
 
 
-Now log back on to `Mainsail` & go back to the `Machine` tab, & copy all your backed up files back into your new & now empty config folder.
+Get back to `Mainsail` & go back to the `Machine` tab, & copy all your backed up files back into your new & now empty config folder.
 
 `Restart` Klipper now.
+
+## ERROR TIME 
+Your version of klipper will only be partially updated & you'll probably get a big red warning saying `PROTOCOL ERROR!`
+& saying you need to update your MCU's!
+
+Don't worry we're dealing with that in a minute!
 
 ## UPDATE MANAGER
 
@@ -173,11 +152,6 @@ Now, back into `Mainsail`. You should have access to the `UPDATE MANAGER` in the
 - Click the circle arrow button in the top of that section the get the latest update info to make sure thats working.
 - Click update on your components if needed
 - NOTE THIS CAN TAKE A LONG TIME - 10-20 minutes in some cases! Wait for it to complete if updates are required
-
-ERROR time, your version of klipper will only be partially updated & you'll probably get a big red warning saying `PROTOCOL ERROR!`
-& saying you need to update your MCU's!
-
-Don't worry we're doing that now!
 
 ## UPDATING THE HOST MCU RPI & MCU FIRMWARE
 
