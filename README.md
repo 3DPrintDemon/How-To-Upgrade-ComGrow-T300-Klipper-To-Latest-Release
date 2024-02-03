@@ -141,7 +141,7 @@ That `chown` command would probably work for the lock on `Klipper` & `Moonraker`
 
 Your choice if you try the `chown` command on `klipper` & `Moonraker` or not.
 
-IF YOU CHOOSE TO TRY THE `chown` command & elect to `UPDATE` your installs now is the time for that & then jump dow the `NEXT` title.
+IF YOU CHOOSE TO TRY THE `chown` command & elect to `UPDATE` your installs now is the time for that & then jump down past the next steps to the `UPDATE MANAGER` title.
 
 ### OR TO REMOVE THE INSTALLS YOU NEED TO HAVE MADE THAT DOWNLOAD BACKUP AT THE START BEFORE YOU DO THIS NEXT STEP OR YOU'RE IN TROUBLE!!
 
@@ -162,7 +162,7 @@ Now log back on to `Mainsail` & go back to the `Machine` tab, & copy all your ba
 
 `Restart` Klipper now.
 
-## NEXT
+## UPDATE MANAGER
 
 You should have access to the `UPDATE MANAGER` in the `Machine` tab.
 - Click the circle arrow button in the top of that section the get the latest update info to make sure thats working.
@@ -219,27 +219,6 @@ Now use a `FTP CLIENT` to log onto the printer & pull the `Klipper.bin` file fro
 REMANE THE FILE to something random, think cat walking across your keyboard random. This MUST be something different on each & every flash attempt. The baord will not flash the same filename twice.
 
 
-SV07 & SV07+ 
-- Copy the file to a FULL SIZE SD CARD!!! Or at least a micro SD in a full size adapter!
-- SHUTDOWN the printer & remove the mains power plug
-- REMOVE THE POWER & USB cables from the screen
-- Remove the draw of the printer & the full front plastic panel using the 4 large bolts on the front.
-- This will expose the sd card slot on the mainboard
-
-
-- Insert the full size sd card upside down into the reader until it clicks in
-
-
-- Power on the printer with the screen still disconnected, making sure its safe with the front off
-- Wait 20-30 seconds, longer if you wish
-- Power off the printer & remove the SD card
-- Reconnect both the screen's cables
-- Power the printer back on
-- Go to the `Machine` tab & check your MCU firmware is now the same number as the other two
-- Shutdown the printer & reassemble to finish!
-- WELL DONE!!
-
-SV06/SV06+
 - Copy the firmware onto a Micro SD card
 - SHUTDOWN the printer
 - Insert the sd card into the reader until it clicks in
