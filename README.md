@@ -110,7 +110,7 @@ Now on SSH run
 ```
 If you get a error does not exist type thing & Kiauh is not already installed go here for install instructions: https://github.com/dw-0/kiauh
 
-It is already installed it should now bring up a request for an update, type `y` to update Kiauh
+If it is already installed it should now bring up a request for an update, type `y` to update Kiauh
 
 You can try to update `Klipper`, `Moonraker` & `Mainsail`
 
@@ -118,16 +118,16 @@ The updates will probably fail.
 
 As on my system these items had been locked with permission/user/group changes & it was not possible to update them, it turned out you can remove them though, so it was quicker & easier to simply remove them & reinstall the new versions a-fresh! Then you know there no old stuff floating about in there also.
 
-Again if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in in any way to remove/update it.
+However, if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way to remove or update it.
 
-To check back out & quit `Kiauh` then type
+To check that back out & quit `Kiauh` then type
 ```
 ls -l
 ```
 ![root root](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/8e5d5623-80f8-4b00-a44c-5a7e16e669a0)
 
 
-If it says `Mainsail` is `root root` the you need to change that to say `mks mks`
+If it says `Mainsail` is `root root` the you need to change that to say `mks mks` as well as all files & subdirectories within.
 
 ![mks mks](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/ff8dd0f0-6ce4-4638-a3a3-7912b2ec809d)
 
