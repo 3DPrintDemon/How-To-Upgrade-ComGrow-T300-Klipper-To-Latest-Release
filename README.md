@@ -110,19 +110,38 @@ Now on SSH run
 ```
 If you get a error does not exist type thing & Kiauh is not already installed go here for install instructions: https://github.com/dw-0/kiauh
 
-It should now bring up an update tyep `y` to update Kiauh
+It is already installed it should now bring up a request for an update, type `y` to update Kiauh
 
-You can try to update `Klipper`, `Moonraker` & `Mainsail`, however on my system these items were locked due to permission/user/group changes & it was easier to simply remove them & reinstall the new versions a-fresh!
+You can try to update `Klipper`, `Moonraker` & `Mainsail`
 
-However if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way or remove/update it.
+However on my system these items were locked due to permission/user/group changes & it was easier to simply remove them & reinstall the new versions a-fresh!
+
+Again if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way to allow you to remove/update it.
+
+To check type
+```
+ls -l
+```
+![root root](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/8e5d5623-80f8-4b00-a44c-5a7e16e669a0)
+
+
+If it says `Mainsail` is `root root` the you need to change that to say `mks mks`
+
+![mks mks](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/ff8dd0f0-6ce4-4638-a3a3-7912b2ec809d)
+
+To make the change paste in this
+
 ```
 sudo -R chown mks:mks mainsail
 ```
-This should change the user & group of the `Mainsail` directory & all files & subdirectories back to your `mks` user profile.
+This should change the user & group of the `Mainsail` directory & all files & subdirectories back to your `mks` user profile & allow you to remove or update them.
+That `chown` command would probably work for `Klipper` & `Moonraker` too, but I chose to remove & reinstall instead of messing about with it all. You choice if you try or not.
 
-YOU NEED TO HAVE MADE THAT DOWNLOAD AT THE START BEFORE YOU DO THIS NEXT STEP OR YOU'RE IN TROUBLE!!
-Select option `3 Remove`. Then remove `Klipper`, `Moonraker` & `Fluidd` if you wish.
-NOTE IF YOU REMOVE THEM THEN YOU WILL LOOSE YOUR PRINTER.CFG FILE AND ALL DATA IN YOUR CONFIG FOLDER!!
+### YOU NEED TO HAVE MADE THAT DOWNLOAD BACKUP AT THE START BEFORE YOU DO THIS NEXT STEP OR YOU'RE IN TROUBLE!!
+
+Select option `3 Remove`. Then remove `Klipper`, `Moonraker`. Also `Fluidd` if you wish.
+
+### NOTE IF YOU REMOVE THEM YOU WILL LOOSE YOUR PRINTER.CFG FILE AND ALL DATA IN YOUR CONFIG FOLDER!! DONT BE THAT PERSON!
 
 
 Now head back to option `1 Install` & install fresh versions of `Klipper`, `Moonraker`, & `Mainsail`
