@@ -155,7 +155,7 @@ Now, back into `Mainsail`. You should have access to the `UPDATE MANAGER` in the
 
 ## UPDATING THE HOST MCU RPI & MCU FIRMWARE
 
-Now your system is updated & working you need to update the rest of the printer.
+Now your system is updated we need to clear those MCU errors & get this system working again.
 First up get back in to SSH & enter the below commands to update the MCU RPI to the same firmware version as the new Klipper.
 
 ```
@@ -200,12 +200,17 @@ REMANE THE FILE to something random, think cat walking across your keyboard rand
 
 - Copy the firmware onto a Micro SD card
 - SHUTDOWN the printer
+- Remove the botton cover of the printer to access the mainboard
+- Locate the SD card slot on the board
 - Insert the sd card into the reader until it clicks in
+- If you want to be safe you can remove the EMMC chip from the printer to stop the Pi from booting
 - Power on the printer
 - Wait 20-30 seconds, longer if you wish
 - Power off the printer & remove the SD card
+- replace the EMMC if you removed it
 - Power the printer back on
 - Go to the `Machine` tab & check your MCU firmware is now the same number as the other two
+- If yes replace the bottom cover
 - You're all done. WELL DONE!!
 
 Your `Machine` tab should now look like this!
