@@ -16,7 +16,7 @@ https://github.com/3DPrintDemon/Demon_KLIPPER_Essentials
 To update anything on the T300 you absolutely MUST be 100% sure that kernel is locked/frozen to stop it being updated when you run any updates or installers.
 Also note this is NOT for beginners, it requires some knowledge of the system you're working on to achieve success! Please be careful!
 
-I would also suggest going into the `Machine` tab in `Mainsail` & selecting the cog in the top corner of the `config files` section & selecting to show hidden files.
+Start first by going into the `Machine` tab in `Mainsail` & selecting the cog in the top corner of the `config files` section & selecting to show hidden files.
 Then click the top checkbox on the left to highlight all files & then press the `Download` button. Make sure the do actually download as some browsers will block it unless  you allow popups for that address. Chough chough - Firefox!
 
 ![ShowAll](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/96d79aa0-e243-416b-a8f3-00ea2609ea5b)
