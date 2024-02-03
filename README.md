@@ -16,7 +16,7 @@ https://github.com/3DPrintDemon/Demon_KLIPPER_Essentials
 To update anything on the T300 you absolutely MUST be 100% sure that kernel is locked/frozen to stop it being updated when you run any updates or installers.
 Also note this is NOT for beginners, it requires some knowledge of the system you're working on to achieve success! Please be careful!
 
-## START
+## START WITH A BACKUP & DOWNLOAD FILES
 
 Start first by going into the `Machine` tab in `Mainsail` & selecting the cog in the top corner of the `config files` section & selecting to show hidden files.
 Then click the top checkbox on the left to highlight all files & then press the `Download` button. Make sure the do actually download as some browsers will block it unless  you allow popups for that address. Chough chough - Firefox!
@@ -120,10 +120,10 @@ sudo -R chown mks:mks mainsail
 ```
 This should change the user & group of the `Mainsail` directory & all files & subdirectories back to your `mks` user profile.
 
-
-Select option `3 Remove`. The remove `Klipper`, `Moonraker` & `Fluidd` if you wish.
+YOU NEED TO HAVE MADE THAT DOWNLOAD AT THE START BEFORE YOU DO THIS NEXT STEP OR YOU'RE IN TROUBLE!!
+Select option `3 Remove`. Then remove `Klipper`, `Moonraker` & `Fluidd` if you wish.
 NOTE IF YOU REMOVE THEM THEN YOU WILL LOOSE YOUR PRINTER.CFG FILE AND ALL DATA IN YOUR CONFIG FOLDER!!
-YOU NEED TO HAVE MADE THAT DOWNLOAD AT THE START BEFORE YOU DO THIS!!
+
 
 Now head back to option `1 Install` & install fresh versions of `Klipper`, `Moonraker`, & `Mainsail`
 
