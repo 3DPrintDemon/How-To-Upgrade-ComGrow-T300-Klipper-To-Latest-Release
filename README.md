@@ -114,11 +114,13 @@ It is already installed it should now bring up a request for an update, type `y`
 
 You can try to update `Klipper`, `Moonraker` & `Mainsail`
 
-However on my system these items had been locked with permission/user/group changes & it was easier to simply remove them & reinstall the new versions a-fresh!
+The updates will probably fail.
 
-Again if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in in any way like to remove/update it.
+As on my system these items had been locked with permission/user/group changes & it was not possible to update them, it turned out you can remove them though, so it was quicker & easier to simply remove them & reinstall the new versions a-fresh! Then you know there no old stuff floating about in there also.
 
-To check type
+Again if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in in any way to remove/update it.
+
+To check back out & quit `Kiauh` then type
 ```
 ls -l
 ```
@@ -134,10 +136,10 @@ To make the change in user & group paste in this
 ```
 sudo -R chown mks:mks mainsail
 ```
-This should change the user & group of the `Mainsail` directory & all files & subdirectories back to your `mks` user profile & allow you to remove or update them.
+This is the recursive form of the command & should change the user & group of the `Mainsail` directory & all files & subdirectories back to your `mks` user profile & allow you to remove or update them.
 That `chown` command would probably work for the lock on `Klipper` & `Moonraker` too, but I chose to remove & reinstall them instead of messing about with it all as they could be deleted without modification, where as `Mainsail` could not.
 
-You choice if you try the `chown` command on `klipper` & `Moonraker` or not.
+Your choice if you try the `chown` command on `klipper` & `Moonraker` or not.
 
 ### YOU NEED TO HAVE MADE THAT DOWNLOAD BACKUP AT THE START BEFORE YOU DO THIS NEXT STEP OR YOU'RE IN TROUBLE!!
 
