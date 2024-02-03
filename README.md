@@ -114,9 +114,9 @@ It is already installed it should now bring up a request for an update, type `y`
 
 You can try to update `Klipper`, `Moonraker` & `Mainsail`
 
-However on my system these items were locked due to permission/user/group changes & it was easier to simply remove them & reinstall the new versions a-fresh!
+However on my system these items had been locked with permission/user/group changes & it was easier to simply remove them & reinstall the new versions a-fresh!
 
-Again if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way to allow you to remove/update it.
+Again if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in in any way like to remove/update it.
 
 To check type
 ```
@@ -129,13 +129,15 @@ If it says `Mainsail` is `root root` the you need to change that to say `mks mks
 
 ![mks mks](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/ff8dd0f0-6ce4-4638-a3a3-7912b2ec809d)
 
-To make the change paste in this
+To make the change in user & group paste in this
 
 ```
 sudo -R chown mks:mks mainsail
 ```
 This should change the user & group of the `Mainsail` directory & all files & subdirectories back to your `mks` user profile & allow you to remove or update them.
-That `chown` command would probably work for `Klipper` & `Moonraker` too, but I chose to remove & reinstall instead of messing about with it all. You choice if you try or not.
+That `chown` command would probably work for the lock on `Klipper` & `Moonraker` too, but I chose to remove & reinstall them instead of messing about with it all as they could be deleted without modification, where as `Mainsail` could not.
+
+You choice if you try the `chown` command on `klipper` & `Moonraker` or not.
 
 ### YOU NEED TO HAVE MADE THAT DOWNLOAD BACKUP AT THE START BEFORE YOU DO THIS NEXT STEP OR YOU'RE IN TROUBLE!!
 
