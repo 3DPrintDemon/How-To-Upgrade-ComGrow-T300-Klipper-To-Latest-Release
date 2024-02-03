@@ -16,7 +16,15 @@ https://github.com/3DPrintDemon/Demon_KLIPPER_Essentials
 To update anything on the T300 you absolutely MUST be 100% sure that kernel is locked/frozen to stop it being updated when you run any updates or installers.
 Also note this is NOT for beginners, it requires some knowledge of the system you're working on to achieve success! Please be careful!
 
-First you have to log into your T300 using SSH. Use `Terminal` on a Mac or `Putty` on a PC.
+I would also suggest going into the `Machine` tab in `Mainsail` & selecting the cog in the top corner of the `config files` section & selecting to show hidden files.
+Then click the top checkbox on the left to highlight all files & then press the `Download` button. Make sure the do actually download as some browsers will block it unless  you allow popups for that address. Chough chough - Firefox!
+
+![ShowAll](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/96d79aa0-e243-416b-a8f3-00ea2609ea5b)
+
+Once that is done continue on....
+
+
+Now you have to log into your T300 using SSH. Use `Terminal` on a Mac or `Putty` on a PC.
 
 once logged in paste in:
 ```
@@ -36,7 +44,7 @@ Now it will load a red background menu BE CAREFUL HERE YOU CAN BREAK THINGS!!! T
 
 ![armbian-config 2](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/e1c9a0a8-5f38-4e83-973d-91fd8c40b6ce)
 
-- Press enter on the top line to change it so the screen reads like the image above.
+- Press enter on the top line to change it so the screen reads like the image above if it is not already!
 - YOUR KERNEL IS NOW FROZEN!
 - DON'T PRESS ON ANYTHING ELSE
 - Move down to `OK` to confirm the choice & go back the blue menu.
@@ -70,7 +78,7 @@ If it works like mine did GREAT well done, the tricky bit is over!
 
 ## UPDATING KLIPPER, MAINSAIL & MOONRAKER
 
-Open your web browser & head over to your printer. Then on Mainsail open the `Machine` tab & find your `moonraker.conf` file & paste in at the bottom
+Open your web browser & head over to your printer. Then on `Mainsail` open the `Machine` tab & find your `moonraker.conf` file & paste in at the bottom
 
 moonraker.conf
 ```
@@ -92,7 +100,37 @@ path: ~/mainsail-config
 origin: https://github.com/mainsail-crew/mainsail-config.git
 managed_services: klipper
 ```
-Now `SAVE & RESTART` klipper & go back to the `Machine` tab, you should new have access to the `UPDATE MANAGER`
+Then you need to `SAVE & RESTART` klipper 
+
+Now on SSH run 
+```
+./kiauh/kiauh.sh
+```
+If you get a error does not exist type thing & Kiauh is not already installed go here for install instructions: https://github.com/dw-0/kiauh
+
+It should now bring up an update tyep `y` to update Kiauh
+
+You can try to update `Klipper`, `Moonraker` & `Mainsail`, however on my system these items were locked due to permission/user/group changes & it was easier to simply remove them & reinstall the new versions a-fresh!
+
+However if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way or remove/update it.
+```
+sudo -R chown mks:mks mainsail
+```
+This should change the user & group of the `Mainsail` directory & all files & subdirectories back to your `mks` user profile.
+
+
+Select option `3 Remove`. The remove `Klipper`, `Moonraker` & `Fluidd` if you wish.
+NOTE IF YOU REMOVE THEM THEN YOU WILL LOOSE YOUR PRINTER.CFG FILE AND ALL DATA IN YOUR CONFIG FOLDER!!
+YOU NEED TO HAVE MADE THAT DOWNLOAD AT THE START BEFORE YOU DO THIS!!
+
+Now head back to option `1 Install` & install fresh versions of `Klipper`, `Moonraker`, & `Mainsail`
+
+
+
+
+
+
+& go back to the `Machine` tab, you should new have access to the `UPDATE MANAGER`
 - Click the circle arrow button in the top of that section the get the latest update info.
 - Click update on your components
 - NOTE THIS CAN TAKE A LONG TIME - 10-20 minutes in some cases! Wait for it to complete
