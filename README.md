@@ -116,7 +116,7 @@ You can try to update `Klipper`, `Moonraker` & `Mainsail`
 
 The updates will probably fail.
 
-As on my system these items had been locked with permission/user/group changes & it was not possible to update them, it turned out you can remove them though, so it was quicker & easier to simply remove them in `Kiauh` & reinstall the new versions a-fresh! Then you know there's no old stuff floating about in there also.
+As on my system these items had been locked with permission/user/group changes & it was not possible to update them, it turned out you can remove them though, so it was quicker & easier to simply remove them in `Kiauh` & reinstall the new versions a-fresh! Then you know there's no old stuff floating about in there also. BUT READ ON BEFORE YOU DO THIS!!!
 
 However, if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way to remove or update it.
 
