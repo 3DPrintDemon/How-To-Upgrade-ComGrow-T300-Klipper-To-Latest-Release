@@ -97,9 +97,9 @@ You can try to update `Klipper`, `Moonraker` & `Mainsail` These updates will pro
 
 This is because at the time of writing on my system these items had been locked with permission/user/group changes & it was not possible to update them, it turns out you can remove them though, so it was quicker & easier to simply remove them in `Kiauh` & reinstall the new versions a-fresh! Then you know there's no old stuff floating about in there also. BUT READ ON BEFORE YOU DO THIS!!!
 
-However, if your system is the same as mine `Mainsail` will need an extra command to allow you to modify it in any way to remove or update it.
+However, if your system is the same as mine `Mainsail` will need an extra command to allow you to modify, remove or update it in any way.
 
-To check that back out & quit `Kiauh` then type
+To check this back out & quit `Kiauh` then type
 ```
 ls -l
 ```
@@ -183,7 +183,9 @@ make menuconfig
 ```
 but this time change the options to these...
 
-## WAITING FOR INFO.................
+![T300 Klipper MCU Settings ](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/4c8c8760-31f4-43d3-b550-9489fe4cbf80)
+
+
 
 
 Save & exit
@@ -196,27 +198,27 @@ This will now build your new MCU firmware
 
 Now use a `FTP CLIENT` to log onto the printer & pull the `Klipper.bin` file from the `klipper/out` folder & download it to your computer.
 
-REMANE THE FILE to something random, think cat walking across your keyboard random. This MUST be something different on each & every flash attempt. The baord will not flash the same filename twice.
+REMANE THE FILE to...
 
+```
+comgrow.bin
+```
 
 - Copy the firmware onto a Micro SD card
 - SHUTDOWN the printer
-- Remove the botton cover of the printer to access the mainboard
+- Remove the bottom cover of the printer to access the mainboard
 - Locate the SD card slot on the board
 - Insert the sd card into the reader until it clicks in
-- If you want to be safe you can remove the EMMC chip from the printer to stop the Pi from booting
 - Power on the printer
-- Wait 20-30 seconds, longer if you wish
+- The MCU firmware will update on boot & can be checked in the `Machine` tab of `Mainsail`
 - Power off the printer & remove the SD card
-- replace the EMMC if you removed it
-- Power the printer back on
-- Go to the `Machine` tab & check your MCU firmware is now the same number as the other two
 - If yes replace the bottom cover
+- Power the printer back on
 - You're all done. WELL DONE!!
 
 Your `Machine` tab should now look like this!
 
-## WAITING FOR MCU UPDATE IMAGE
+![T300 Machine Tab](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/2c4074ae-3a21-47fc-8713-456192af9801)
 
 I hope this helps you update your printer/s! Happy printing!
 
