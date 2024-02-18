@@ -201,8 +201,6 @@ but this time change the options to these...
 I am aware this chip setting normally requires a 64kib bootloader but this machine uses 32kib, & a setting of 64kib did not work on my unit.
 Aslo my printer.cfg said at the top to use USART1 - this is incorrect, it is the above USB setting!
 
-
-
 Save & exit
 
 now simply type 
@@ -234,6 +232,10 @@ comgrow.bin
 Your `Machine` tab should now look like this!
 
 ![T300 Machine Tab](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/2c4074ae-3a21-47fc-8713-456192af9801)
+
+## END NOTES:
+
+I elected to comment out the stock `Macro.cfg` on my new updated system as I much prefer to include the `mainsail.cfg` & copy out the `[gcode_macro _CLIENT_VARIABLE]` that is within the file & use all the custom settings there alongside my own macros, those are linked below.
 
 I hope this helps you update your printer/s! Happy printing!
 
