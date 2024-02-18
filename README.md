@@ -237,6 +237,10 @@ Your `Machine` tab should now look like this!
 
 I elected to comment out the stock `Macro.cfg` on my new updated system as I much prefer to include the `mainsail.cfg` & copy out the `[gcode_macro _CLIENT_VARIABLE]` that is within the file & use all the custom settings there alongside my own macros, those are linked below.
 
+copy these out to your new `macros.cfg` that you should create, & uncomment them, find them in the `mainsail.cfg`. Dont use these AND the Comgrow ones!
+![mainsail](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/8765d7bb-d678-460e-b72e-b86ce30bac2d)
+
+
 I hope this helps you update your printer/s! Happy printing!
 
 ### If you need some macros be sure to check out these!
