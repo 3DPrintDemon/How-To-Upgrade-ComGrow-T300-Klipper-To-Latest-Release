@@ -16,6 +16,19 @@ https://github.com/3DPrintDemon/Demon_KLIPPER_Essentials
 To update anything on the T300 you absolutely MUST be 100% sure that kernel is locked/frozen to stop it being updated when you run any updates or installers.
 Also note this is NOT for beginners, it requires some knowledge of the system you're working on to achieve success! Please be careful!
 
+## NOTICE BEFORE YOU START!!
+
+At the time of writing the T300 is set to use a different `virtual_sdcard` location than what is now REQUIRED in the latest version of Klipper. When updating the system the new versions all use the correct newly required location, but the printer's touchscreen does NOT! This is due to the screen's own Comgrow firmware, this means the screen continues to use the old now dead directory. This fact has been passed on to Comrgrow & hopefully they will be making some changes to correct this in their firmware. This is not user configurable.
+
+If you wish to use the screen to start prints you will manually need to drop files into this dead folder for the screen to use.
+```
+/home/mks/gcode_files
+```
+Otherwise simply start prints from your PC or mobile device directly in `Mainsail` while we wait for Comgrow to adjust their screen's firmware.
+
+If you find this unacceptable DO NOT DO THIS UPDATE RIGHT NOW!
+
+
 ## START WITH A FULL BACKUP & DOWNLOAD FILES
 
 Start first by making a clone of your EMMC.
