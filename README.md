@@ -199,7 +199,7 @@ but this time change the options to these...
 ![T300 Klipper MCU Settings ](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/4c8c8760-31f4-43d3-b550-9489fe4cbf80)
 
 I am aware this chip setting normally requires a 64kib bootloader but this machine uses 32kib, & a setting of 64kib did not work on my unit.
-Aslo my printer.cfg said at the top to use USART1 - this is incorrect, it is the above USB setting!
+Also my printer.cfg said at the top to use USART1 - this is incorrect, it is the above USB setting!
 
 Save & exit
 
