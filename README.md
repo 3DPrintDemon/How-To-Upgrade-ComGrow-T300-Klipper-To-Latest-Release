@@ -13,7 +13,7 @@
 https://github.com/3DPrintDemon/Demon_KLIPPER_Essentials
 ***********************************************************************************************************************************************************
 
-To update anything on the T300 you absolutely MUST be 100% sure that kernel is locked/frozen to stop it being updated when you run any updates or installers.
+before you update anything on the T300 you absolutely MUST be 100% sure that the kernel is locked/frozen to stop it being updated when you run any updates or installers.
 Also note this is NOT for beginners, it requires some knowledge of the system you're working on to achieve success! Please be careful!
 
 ## NOTICE BEFORE YOU START!!
@@ -225,7 +225,7 @@ comgrow.bin
 - Power on the printer
 - The MCU firmware will update on boot & can be checked in the `Machine` tab of `Mainsail`
 - Power off the printer & remove the SD card
-- If yes replace the bottom cover
+- Replace the bottom cover
 - Power the printer back on
 - You're all done. WELL DONE!!
 
@@ -237,7 +237,7 @@ Your `Machine` tab should now look like this!
 
 I elected to comment out the stock `Macro.cfg` on my new updated system as I much prefer to include the `mainsail.cfg` & copy out the `[gcode_macro _CLIENT_VARIABLE]` that is within the file & use all the custom settings there alongside my own macros, those are linked below.
 
-copy these out to your new `macros.cfg` that you should create, uncomment them so the macro is active & set values to your preference, find them in the `mainsail.cfg`. Dont use these AND the Comgrow ones! Make sure nothing is duplicated also.
+copy these out to your new `macros.cfg` that you should create, remove the hashes to comment them in so the macro is active & then set values to your preference, find them in the `mainsail.cfg`. Dont use these AND the Comgrow ones! Make sure nothing is duplicated also.
 
 ![mainsail](https://github.com/3DPrintDemon/How-To-Upgrade-ComGrow-T300-Klipper-To-Latest-Release/assets/122202359/8765d7bb-d678-460e-b72e-b86ce30bac2d)
 
